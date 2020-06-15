@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name:    Logic
 //////////////////////////////////////////////////////////////////////////////////
-module Logic(A, B, ALUop, LogicOut, out_ALUop4, out_ALUop5, out_ALUop6, out_ALUop7);
+module Logic(A, B, ALUop, LogicOut);
     input[31:0] A,B;
     input[3:0] ALUop;
     output[31:0] LogicOut;
@@ -23,7 +23,7 @@ Xor32bit XOR (.A(A),
 Not32bit NOR (.X(out_ALUop5),
               .Y(out_ALUop7) );
 
-MUX_4_1 LogicOut (.a(out_ALUop4),
+MUX_4_1 _LogicOut (.a(out_ALUop4),
                   .b(out_ALUop5),
                   .c(out_ALUop6),
                   .d(out_ALUop7),
