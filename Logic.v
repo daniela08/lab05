@@ -23,11 +23,11 @@ Xor32bit XOR (.A(A),
 Not32bit NOR (.X(out_ALUop5),
               .Y(out_ALUop7) );
 
-MUX_4_1 _LogicOut (.a(out_ALUop4),
+MUX_4_1 Logicout (.a(out_ALUop4),
                   .b(out_ALUop5),
                   .c(out_ALUop6),
                   .d(out_ALUop7),
-                  .ALUop([1:0] ALUop),
+                  .ALUcontrol(ALUop[1:0]),
                   .z(LogicOut) );
 
 endmodule

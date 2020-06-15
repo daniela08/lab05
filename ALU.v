@@ -9,17 +9,17 @@ module ALU(A, B, ALUop, Result, N, Z, C, V);
     output N,Z,C,V;
     reg[31:0] ArithOut,LogicOut;
 
-Arith arith1(.A([31:0] A),
-             .B([31:0] B),
-             .ALUop([3:0] ALUop),
-             .ArithOut([31:0] ArithOut),
+Arith arith1(.A(A),
+             .B(B),
+             .ALUop(ALUop),
+             .ArithOut(ArithOut),
              .C(C),
              .V(V) );
 
-Logic logic1(.A([31:0] A),
-             .B([31:0] B),
-             .ALUop([3:0] ALUop),
-             .LogicOut([31:0] LogicOut) );
+Logic logic1(.A(A),
+             .B(B),
+             .ALUop(ALUop),
+             .LogicOut(LogicOut) );
 
 MUX_2_1 muxfinal (.X(LogicOut),
                   .Y(ArithOut),
