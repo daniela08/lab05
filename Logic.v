@@ -2,11 +2,10 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Module Name:    Logic
 //////////////////////////////////////////////////////////////////////////////////
-module Logic(A, B, ALUop, LogicOut);
+module Logic(A, B, ALUop, LogicOut, out_ALUop4, out_ALUop5, out_ALUop6, out_ALUop7);
     input[31:0] A,B;
     input[3:0] ALUop;
     output[31:0] LogicOut;
-    wire out_ALUop5;
     reg[31:0] out_ALUop4, out_ALUop5, out_ALUop6, out_ALUop7;
 
 And32bit AND (.A([31:0] A),
