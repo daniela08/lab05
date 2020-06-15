@@ -6,7 +6,7 @@ module Logic(A, B, ALUop, LogicOut);
     input[31:0] A,B;
     input[3:0] ALUop;
     output[31:0] LogicOut;
-    reg[31:0] out_ALUop4, out_ALUop5, out_ALUop6, out_ALUop7;
+    wire out_ALUop4, out_ALUop5, out_ALUop6, out_ALUop7;
 
 And32bit AND (.A(A),
               .B(B),
@@ -14,7 +14,7 @@ And32bit AND (.A(A),
 
 Or32bit OR (.A(A),
             .B(B),
-            .out_ALUop5(out_ALUop5) );
+            .out_ALUop5(out_ALUop5));
 
 Xor32bit XOR (.A(A),
               .B(B),

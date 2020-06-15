@@ -6,20 +6,21 @@ module ALU(A, B, ALUop, Result, N, Z, C, V);
     input[31:0] A,B;
     input[3:0] ALUop;
     output[31:0] Result;
-    output reg N,Z,C,V;
-    reg[31:0] ArithOut,LogicOut;
+    output reg N,Z;
+	 output C,V;
+    wire ArithOut,LogicOut;
 
 Arith arith1(.A(A),
              .B(B),
              .ALUop(ALUop),
              .ArithOut(ArithOut),
              .C(C),
-             .V(V) );
+             .V(V));
 
 Logic logic1(.A(A),
              .B(B),
              .ALUop(ALUop),
-             .LogicOut(LogicOut) );
+             .LogicOut(LogicOut));
 
 MUX_2_1 muxfinal (.X(LogicOut),
                   .Y(ArithOut),
@@ -31,7 +32,6 @@ always@(Result)
     Z <= ~(Result[3] & Result[2] & Result[1] & Result[0]);
     N <= Result[31];
   end
-
-
+  
 
 endmodule

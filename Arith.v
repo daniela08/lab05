@@ -40,7 +40,3 @@ module Arith(A, B, ALUop, ArithOut, C, V);
       end
 
 endmodule
-
-
-
-endmodule
