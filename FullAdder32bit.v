@@ -1,15 +1,14 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Module Name:    FullAdder32bit 
+// Module Name:    FullAdder32bit
 //////////////////////////////////////////////////////////////////////////////////
 module FullAdder32bit(
     input [31:0]A,FB,
     input ALUop1_cin,
     output [31:0]sum,
-    output cout
-    );
-	 
-wire carryFA0, carryFA1, carryFA2, carryFA3, 
+    output cout);
+
+wire carryFA0, carryFA1, carryFA2, carryFA3,
 		carryFA4, carryFA5, carryFA6, carryFA7,
 		carryFA8, carryFA9, carryFA10, carryFA11,
 		carryFA12, carryFA13, carryFA14, carryFA15,
@@ -17,7 +16,7 @@ wire carryFA0, carryFA1, carryFA2, carryFA3,
 		carryFA20, carryFA21, carryFA22, carryFA23,
 		carryFA24, carryFA25, carryFA26, carryFA27,
 		carryFA28, carryFA29, carryFA30, carryFA31;
-	 
+
 FullAdder1bit FA0(
 	.A(A[0]),
 	.FB(FB[0]),
