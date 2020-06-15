@@ -6,7 +6,7 @@ module ALU(A, B, ALUop, Result, N, Z, C, V);
     input[31:0] A,B;
     input[3:0] ALUop;
     output[31:0] Result;
-    output N,Z,C,V;
+    output reg N,Z,C,V;
     reg[31:0] ArithOut,LogicOut;
 
 Arith arith1(.A(A),
