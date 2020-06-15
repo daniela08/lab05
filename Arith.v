@@ -27,7 +27,7 @@ module Arith(A, B, ALUop, ArithOut, C, V);
     SignExtend sltSE (.X(sum[31]),
                       .Y(slt) );
 
-    MUX_2_1 mux1 (.X(sum),
+    MUX_2_1 mux2 (.X(sum),
                   .Y(slt),
                   .ALUop(ALUop[3]),
                   .F(ArithOut) );
