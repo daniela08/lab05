@@ -34,8 +34,8 @@ module Arith(A, B, ALUop, ArithOut, C, V);
 
     always@(A,B,ALUop)
       begin
-        assign C <= ALUop[0] & cout;
-        assign V <= (~(A[31] ^ B[31]) ^ ALUop[1]) & (A[31] ^ sum[31]) & ALUop[0];
+        C <= ALUop[0] & cout;
+        V <= (~(A[31] ^ B[31]) ^ ALUop[1]) & (A[31] ^ sum[31]) & ALUop[0];
       end
 
 

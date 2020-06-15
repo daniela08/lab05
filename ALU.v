@@ -28,8 +28,8 @@ MUX_2_1 muxfinal (.X(LogicOut),
 
 always@(Result)
   begin
-    assign Z <= ~(Result[3] & Result[2] & Result[1] & Result[0]);
-    assign N <= Result[31];
+    Z <= ~(Result[3] & Result[2] & Result[1] & Result[0]);
+    N <= Result[31];
   end
 
 
