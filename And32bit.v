@@ -1,0 +1,15 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Create Date:    19:14:19 06/14/2020 
+// Design Name: 
+// Module Name:    And32bit 
+//////////////////////////////////////////////////////////////////////////////////
+module And32bit(
+    input [31:0]A,B,
+    output reg[31:0]out_ALUop4
+    );
+	always @(A,B)
+	begin
+	 out_ALUop4 <= A & B;
+	end
+endmodule
