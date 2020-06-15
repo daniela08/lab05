@@ -11,7 +11,7 @@ module Arith(A, B, ALUop, ArithOut, C, V);
     reg cout;
 
     Not32bit notB (.X(B),
-                   .Y([BC) );
+                   .Y(BC) );
 
     MUX_2_1 mux1 (.X(A),
                   .Y(B),
