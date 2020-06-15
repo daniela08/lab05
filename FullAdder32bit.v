@@ -5,8 +5,8 @@
 module FullAdder32bit(
     input [31:0]A,FB,
     input ALUop1_cin,
-    output [31:0]sum,
-    output cout);
+    output reg[31:0]sum,
+    output cout,sum2);
 
 wire carryFA0, carryFA1, carryFA2, carryFA3,
 		carryFA4, carryFA5, carryFA6, carryFA7,
@@ -272,4 +272,8 @@ FullAdder1bit FA31(
 	.sum(sum[31]),
 	.cout(cout)
 );
+
+begin
+	assign sum2 = sum[31];
+end
 endmodule
