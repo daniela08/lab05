@@ -25,16 +25,12 @@ module Arith(A, B, ALUop, ArithOut, C, V, BC);
                            	 .cout(cout) );
 
 
-
-
     begin
     assign C <= ALUop[0] & cout;
     end
 
     begin
-    assign xnor <= ~(A[31] ^ B[31]) ^ ALUop[1];
-    assign xor <= A[31] ^ sum[31];
-    assign V <= xnor & xor & ALUop[0];
+    assign V <= (~(A[31] ^ B[31]) ^ ALUop[1]) & (A[31] ^ sum[31]) & ALUop[0];
     end
 
 

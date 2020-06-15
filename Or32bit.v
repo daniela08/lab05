@@ -1,11 +1,10 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Module Name:    Or32bit 
+// Module Name:    Or32bit
 //////////////////////////////////////////////////////////////////////////////////
-module Or32bit(
-    input [31:0]A,B,
-    output reg[31:0]out_ALUop5
-    );
+module Or32bit(A, B, out_ALUop5);
+    input [31:0]A,B;
+    output reg[31:0]out_ALUop5;
 	always @(A,B)
 	begin
 	 out_ALUop5 <= A | B;
