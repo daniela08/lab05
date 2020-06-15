@@ -6,7 +6,7 @@ module Arith(A, B, ALUop, ArithOut, C, V);
     input[31:0] A,B;
     input[3:0] ALUop;
     output[31:0] ArithOut;
-    output C,V;
+    output reg C,V;
     reg[31:0] BC,FB,sum,slt;
     reg cout;
 
