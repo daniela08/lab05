@@ -8,7 +8,7 @@ module Arith(A, B, ALUop, ArithOut, C, V);
     output[31:0] ArithOut;
     output reg C,V;
     wire BC,FB,slt,sum,sum2,cout;
-
+  
 
     Not32bit notB (.X(B),
                    .Y(BC));
