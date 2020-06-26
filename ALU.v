@@ -27,10 +27,13 @@ MUX_2_1 muxfinal (.X(LogicOut),
                   .ALUop(ALUop[2]),
                   .F(Result) );
 
-always@(Result)
+always@*
   begin
-    Z <= ~(Result[3] & Result[2] & Result[1] & Result[0]);
-    N <= Result[31];
+  if (Result == 32'b0)
+		Z=1;
+	else
+		Z=0;
+    N = Result[31];
   end
   
 
