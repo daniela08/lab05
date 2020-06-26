@@ -5,7 +5,7 @@
 module FullAdder32bit(
     input [31:0]A,FB,
     input ALUop1_cin,
-    output reg[31:0]sum,
+    output[31:0]sum,
     output cout,sum2);
 
 wire carryFA0, carryFA1, carryFA2, carryFA3,
