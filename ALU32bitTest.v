@@ -44,11 +44,12 @@ module ALU32bitTest;
 		#1 A = 10;B = 12;ALUop = 10;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#10;
         
 		// Add stimulus here
 
 	end
       
 endmodule
+
 
