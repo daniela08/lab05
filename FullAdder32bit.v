@@ -273,7 +273,7 @@ FullAdder1bit FA31(
 	.cout(cout)
 );
 
-begin
-	assign sum2 = sum[31];
-end
+
+    assign sum2 = sum[31];
+
 endmodule

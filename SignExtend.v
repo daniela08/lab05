@@ -1,8 +1,7 @@
 module SignExtend (X, Y);
-    input X;
-    output[31:0] Y;
+  input X;
+  output[31:0] Y;
 
-    begin
       assign Y[0] = X;
       assign Y[1] = X;
       assign Y[2] = X;
@@ -35,6 +34,6 @@ module SignExtend (X, Y);
       assign Y[29] = X;
       assign Y[30] = X;
       assign Y[31] = X;
-    end
+
 
 endmodule // SignExtend

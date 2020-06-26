@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 
 ////////////////////////////////////////////////////////////////////////////////
-// Design Name:   ALU
+// Design Name:   ALU_tb
 // Module Name:   /home/milagros/LAB5/ALU_tb.v
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -17,7 +17,7 @@ module alu_tb();
 	reg [103:0] testvectors[20:0];
 
 	// instantiate device under test
-	ALU dut(a, b, f, y, zero);
+	ALU dut(a, b, f, y, zero, negative, carry, overflow);
 
 	// generate clock
 	always begin
@@ -40,21 +40,19 @@ module alu_tb();
       y_expected = testvectors[vectornum][35:4];
       zero_expected = testvectors[vectornum][0];
     end
-	 
-	 always @(negedge clk)
+
+	always @(negedge clk)
     begin
       if (y !== y_expected || zero !== zero_expected) begin
         $display("Error in vetor %d", vectornum);
         $display(" Inputs : a = %h, b = %h, f = %b", a, b, f);
-        $display(" Outputs: y = %h (%h expected), zero = %h (%h expected)",
-          y, y_expected, zero, zero_expected);
+        $display(" Outputs: y = %h (%h expected), zero = %h (%h expected)", y, y_expected, zero, zero_expected);
         errors = errors+1;
       end
       vectornum = vectornum + 1;
       if (testvectors[vectornum][0] == 1'bx) begin
         $display("%d tests completed with %d errors", vectornum, error);
         $finish;
-    end
-  end
-	 
-end module
+    	end
+  	end
+endmodule

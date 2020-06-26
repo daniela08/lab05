@@ -3,9 +3,9 @@
 // Module Name:    Not32bit
 //////////////////////////////////////////////////////////////////////////////////
 module Not32bit(X, Y);
-    input[31:0] X;
-    output reg[31:0] Y;
-	always @*
+  input[31:0] X;
+  output reg[31:0] Y;
+always @*
 	begin
 	 Y <= ~X;
 	end
